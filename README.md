@@ -1,5 +1,7 @@
-#RELAZIONE PRIMO PROGETTO – PROGRAMMAZIONE 2 [JAVA] <br />
-###Matteo Montalbetti <br />
+# RELAZIONE PRIMO PROGETTO – PROGRAMMAZIONE 2 [JAVA] <br />
+### Matteo Montalbetti <br />
+<br />
+<br />
 La consegna del progetto poneva il seguente problema: “[…] si richiede di progettare, realizzare e documentare
 la collezione SecureFileContainer. SecureFileContainer è un contenitore di oggetti di tipo E. Intuitivamente la
 collezione si comporta come una specie File Storage per la memorizzazione e condivisione di file. La collezione
