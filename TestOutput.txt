@@ -1,0 +1,195 @@
+------------------------FIRST IMPLEMENTATION----------------------------
+
+
+Programma di test per la prima implementazione.
+Verranno testati tutti i metodi uno dopo l'altro
+
+
+Test di createUser: [valido]
+
+É stato creato un nuovo utente con dati (id1, psw1)
+
+Test di createUser: [valido]
+
+É stato creato un nuovo utente con dati (id2, psw2)
+
+Test di getSize: [not valido -> WrongPswException]
+
+Dati di accesso non validi -> failure
+
+Test di getSize: [valido | su vuoto]
+
+Numero dei file posseduti dall'utente (id1): 0
+
+Test di put: [valido]
+
+É stato inserito il file 'ciao1' con diritti di accesso 'w' nel container di (id1)
+É stato inserito il file 'prova1' con diritti di accesso 'w' nel container di (id1)
+
+Test di put: [valido]
+
+É stato inserito il file 'file1' con diritti di accesso 'w' nel container di (id1)
+
+É stato inserito il file 'ciao2' con diritti di accesso 'w' nel container di (id2)
+
+Test di put: [not valido -> UserNotFoundException]
+
+Un utente con l'id indicato non é presente -> failure
+
+Test di getSize: [valido | !(su vuoto)]
+
+Numero dei file posseduti dall'utente (id1): 3
+Numero dei file posseduti dall'utente (id2): 1
+
+Test di get: [valido]
+
+Hai richiesto e ottenuto il file: ciao1
+
+Test di get: [not valido -> FileNotFoundException]
+
+Il file richiesto non é stato trovato -> failure
+
+Test di getSize: [valido | !(su vuoto)]
+
+Numero dei file posseduti dall'utente (id1): 3
+Numero dei file posseduti dall'utente (id2): 1
+
+Test di remove: [valido]
+
+Hai rimosso il file: ciao1 dal container di (id1)
+
+Test di getSize: [valido | !(su vuoto)]
+
+Numero dei file posseduti dall'utente (id1): 2
+Numero dei file posseduti dall'utente (id2): 1
+
+Test di copy: [valido]
+
+Hai duplicato il file 'prova1' nel container di (id1)
+
+Hai duplicato e poi eliminato il file 'ciao2' nel container di (id2)
+
+Test di getSize: [valido | !(su vuoto)]
+
+Numero dei file posseduti dall'utente (id1): 3
+Numero dei file posseduti dall'utente (id2): 1
+
+Test dei due Share: [valido]
+
+L'utente (id1) ha condiviso in lettura il file 'prova1' con l'utente (id2)
+L'utente (id2) ha condiviso in lettura il file 'ciao2' con l'utente (id1)
+
+Numero dei file posseduti dall'utente (id1): 4
+Numero dei file posseduti dall'utente (id2): 2
+
+Test dell'iteratore: [valido]
+Gli elementi di (id1) sono:   prova1   file1   prova1   prova1   
+
+Gli elementi di (id2) sono:   ciao2   ciao2   
+
+------------------------SECOND IMPLEMENTATION----------------------------
+
+
+Programma di test per la seconda implementazione.
+Verranno testati tutti i metodi uno dopo l'altro
+
+
+Test di createUser: [valido]
+
+É stato creato un nuovo utente con dati (id1, psw1)
+
+Test di createUser: [valido]
+
+É stato creato un nuovo utente con dati (id2, psw2)
+
+Test di getSize: [not valido -> WrongPswException]
+
+Dati di accesso non validi -> failure
+
+Test di getSize: [valido | su vuoto]
+
+Numero dei file posseduti dall'utente (id1): 0
+
+Test di put: [valido]
+
+É stato inserito il file 'ciao1' con diritti di accesso 'w' nel container di (id1)
+É stato inserito il file 'prova1' con diritti di accesso 'w' nel container di (id1)
+
+Test di put: [valido]
+
+É stato inserito il file 'file1' con diritti di accesso 'w' nel container di (id1)
+
+É stato inserito il file 'ciao2' con diritti di accesso 'w' nel container di (id2)
+
+Test di put: [not valido -> UserNotFoundException]
+
+Un utente con l'id indicato non é presente -> failure
+
+Test di getSize: [valido | !(su vuoto)]
+
+Numero dei file posseduti dall'utente (id1): 3
+Numero dei file posseduti dall'utente (id2): 1
+
+Test di get: [valido]
+
+Hai richiesto e ottenuto il file: ciao1
+
+Test di get: [not valido -> FileNotFoundException]
+
+Il file richiesto non é stato trovato -> failure
+
+Test di getSize: [valido | !(su vuoto)]
+
+Numero dei file posseduti dall'utente (id1): 3
+Numero dei file posseduti dall'utente (id2): 1
+
+Test di remove: [valido]
+
+Hai rimosso il file: ciao1 dal container di (id1)
+
+Test di getSize: [valido | !(su vuoto)]
+
+Numero dei file posseduti dall'utente (id1): 2
+Numero dei file posseduti dall'utente (id2): 1
+
+Test di copy: [valido]
+
+Hai duplicato il file 'prova1' nel container di (id1)
+
+Hai duplicato e poi eliminato il file 'ciao2' nel container di (id2)
+
+Test di getSize: [valido | !(su vuoto)]
+
+Numero dei file posseduti dall'utente (id1): 3
+Numero dei file posseduti dall'utente (id2): 1
+
+Test dei due Share: [valido]
+
+L'utente (id1) ha condiviso in lettura il file 'prova1' con l'utente (id2)
+L'utente (id2) ha condiviso in lettura il file 'ciao2' con l'utente (id1)
+
+Numero dei file posseduti dall'utente (id1): 4
+Numero dei file posseduti dall'utente (id2): 2
+
+Test dell'iteratore: [valido]
+Gli elementi di (id1) sono:   prova1   file1   prova1   ciao2   
+
+Gli elementi di (id2) sono:   ciao2   prova1   
+
+------------------------OTHER TESTS (on second impl.)----------------------------
+
+
+Test di createUser: [not valido -> IllegalArgumentException]
+
+Hai inserito un username non valido -> failure
+
+Test dei due Share: [not valido -> ShareWithYouException]
+
+Non é possibile condividere con se stessi! -> failure
+
+Test dei due Share: [not valido -> RightsErrorException]
+
+L'utente non é possessore del file (no 'w' rights) -> failure
+
+
+===============FINE TEST - SUCCESS===================
